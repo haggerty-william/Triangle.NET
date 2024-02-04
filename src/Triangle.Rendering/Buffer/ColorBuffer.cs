@@ -3,7 +3,9 @@ namespace TriangleNet.Rendering.Buffer
 {
     using System.Drawing;
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
     public class ColorBuffer : BufferBase<Color>
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ColorBuffer"/> class.

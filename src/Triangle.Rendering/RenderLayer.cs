@@ -6,15 +6,25 @@ namespace TriangleNet.Rendering
 
     using Color = System.Drawing.Color;
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
     public class RenderLayer : IRenderLayer
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     {
         int count;
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         protected IBuffer<float> points;
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         protected IBuffer<uint> indices;
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         protected IBuffer<uint> partition;
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         protected IBuffer<Color> colors;
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RenderLayer"/> class.

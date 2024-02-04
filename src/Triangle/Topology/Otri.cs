@@ -23,7 +23,9 @@ namespace TriangleNet.Topology
         internal Triangle tri;
         internal int orient; // Ranges from 0 to 2.
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public int Orient => orient;
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 
         /// <summary>
         /// Gets or sets the triangle.

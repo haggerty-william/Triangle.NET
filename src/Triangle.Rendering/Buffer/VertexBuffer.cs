@@ -5,7 +5,9 @@ using TriangleNet.Geometry;
 
 namespace TriangleNet.Rendering.Buffer
 {
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
     public class VertexBuffer : BufferBase<float>
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     {
         #region Static methods
 

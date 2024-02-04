@@ -12,16 +12,22 @@ namespace TriangleNet.Rendering
     public class RenderManager
     {
         // TODO: delete
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public static bool VORONOI_DEBUG = false;
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 
         IRenderControl control;
         IRenderContext context;
         IRenderer renderer;
         Projection zoom;
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public IRenderControl Control => control; 
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public IRenderContext Context => context;
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RenderManager"/> class.

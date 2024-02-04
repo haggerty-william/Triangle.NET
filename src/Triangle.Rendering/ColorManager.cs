@@ -5,7 +5,9 @@ namespace TriangleNet.Rendering
     using System.Drawing;
     using TriangleNet.Rendering.Util;
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
     public class ColorManager
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     {
         #region Public properties
 
@@ -68,7 +70,9 @@ namespace TriangleNet.Rendering
             return colors;
         }
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public Dictionary<uint, Color> CreateColorDictionary(int length)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             var keys = new uint[length];
 
@@ -80,7 +84,9 @@ namespace TriangleNet.Rendering
             return CreateColorDictionary(keys);
         }
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public Dictionary<uint, Color> CreateColorDictionary(IEnumerable<uint> keys)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             ColorDictionary = new Dictionary<uint, Color>();
 

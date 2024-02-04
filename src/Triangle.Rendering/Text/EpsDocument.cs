@@ -5,7 +5,9 @@ namespace TriangleNet.Rendering.Text
     using System.Drawing;
     using System.IO;
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
     public class EpsDocument : IDisposable
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     {
         // Constant to convert from millimeters to PostScript units (1/72th inch).
         private const double UNITS_PER_MM = 72.0 / 25.4;
@@ -23,13 +25,17 @@ namespace TriangleNet.Rendering.Text
         /// </summary>
         public int DefaultPointSize { get; set; }
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public EpsDocument(string filename, PageSize pageSize)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
             : this(File.Create(filename), pageSize)
         {
             Name = Path.GetFileName(filename);
         }
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public EpsDocument(Stream stream, PageSize pageSize)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             _w = new FormattingStreamWriter(stream);
             _w.NewLine = "\n";
@@ -39,7 +45,9 @@ namespace TriangleNet.Rendering.Text
             DefaultPointSize = 1;
         }
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public void AddComment(string comment, int line = 1)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             for (int i = 0; i < line; i++)
             {
@@ -59,17 +67,23 @@ namespace TriangleNet.Rendering.Text
             }
         }
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public void DrawPoint(Point p)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             _w.WriteLine("{0} {1} P", p.X, p.Y);
         }
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public void DrawLine(Point p1, Point p2)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             _w.WriteLine("{0} {1} {2} {3} L", p1.X, p1.Y, p2.X, p2.Y);
         }
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public void DrawRectangle(Rectangle rect)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             _w.WriteLine("newpath");
             _w.WriteLine("  {0}  {1}  moveto", rect.X, rect.Y);
@@ -81,7 +95,9 @@ namespace TriangleNet.Rendering.Text
 
         }
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public void SetClip(Rectangle rect)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             _w.WriteLine("newpath");
             _w.WriteLine("  {0}  {1}  moveto", rect.X, rect.Y);
@@ -92,7 +108,9 @@ namespace TriangleNet.Rendering.Text
             _w.WriteLine("clip newpath");
         }
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public void SetColor(Color color)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             _w.WriteLine("{0:0.###} {1:0.###} {2:0.###} setrgbcolor",
                 ((float)color.R) / 255f,
@@ -100,18 +118,24 @@ namespace TriangleNet.Rendering.Text
                 ((float)color.B) / 255f);
         }
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public void SetStroke(float width)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             _w.WriteLine("{0:0.###} setlinewidth", width);
         }
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public void SetStroke(float width, Color color)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             SetColor(color);
             SetStroke(width);
         }
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public void WriteHeader()
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             var x = _size.X; // * UNITS_PER_MM
             var y = _size.Y;
@@ -173,14 +197,18 @@ namespace TriangleNet.Rendering.Text
         bool disposed = false;
 
         // Public implementation of Dispose pattern callable by consumers.
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public void Dispose()
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             Dispose(true);
             GC.SuppressFinalize(this);
         }
 
         // Protected implementation of Dispose pattern.
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         protected virtual void Dispose(bool disposing)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             if (disposed)
                 return;
@@ -198,7 +226,9 @@ namespace TriangleNet.Rendering.Text
             disposed = true;
         }
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         ~EpsDocument()
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             Dispose(false);
         }

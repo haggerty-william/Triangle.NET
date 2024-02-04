@@ -5,11 +5,15 @@ using TriangleNet.Geometry;
 
 namespace TriangleNet.Rendering.Buffer
 {
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
     public class IndexBuffer : BufferBase<uint>
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     {
         #region Static methods
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public static IBuffer<uint> Create(IEnumerable<IEdge> edges, int size)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             var buffer = new IndexBuffer(size * edges.Count(), size);
 
@@ -28,7 +32,9 @@ namespace TriangleNet.Rendering.Buffer
             return buffer;
         }
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public static IBuffer<uint> Create(IEnumerable<ITriangle> elements, int size)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             var buffer = new IndexBuffer(size * elements.Count(), size);
 

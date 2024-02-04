@@ -11,7 +11,9 @@ namespace TriangleNet.IO
     using TriangleNet.Geometry;
     using TriangleNet.Meshing;
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
     public static class FileProcessor
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     {
         static readonly List<IFileFormat> formats;
 
@@ -24,12 +26,16 @@ namespace TriangleNet.IO
             };
         }
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public static void Add(IFileFormat format)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             formats.Add(format);
         }
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public static bool IsSupported(string file)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             foreach (var format in formats)
             {

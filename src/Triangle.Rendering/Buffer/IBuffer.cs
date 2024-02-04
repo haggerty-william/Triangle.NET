@@ -1,14 +1,24 @@
 ﻿
 namespace TriangleNet.Rendering.Buffer
 {
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
     public enum BufferTarget : byte
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     {
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         ColorBuffer,
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         IndexBuffer,
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         VertexBuffer
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     }
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
     public interface IBuffer<T> where T : struct
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     {
         /// <summary>
         /// Gets the contents of the buffer.

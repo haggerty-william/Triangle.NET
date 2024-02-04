@@ -43,9 +43,13 @@ namespace TriangleNet.Rendering
         /// <param name="clear">If true, point buffer will be cleared.</param>
         void Reset(bool clear);
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         void SetPoints(IBuffer<float> buffer, bool reset = true);
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         void SetIndices(IBuffer<uint> buffer);
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 
         #region Attached data (mesh partitioning and heat map rendering)
 

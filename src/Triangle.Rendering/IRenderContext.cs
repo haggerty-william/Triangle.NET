@@ -5,7 +5,9 @@ namespace TriangleNet.Rendering
     using TriangleNet.Geometry;
     using TriangleNet.Meshing;
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
     public interface IRenderContext
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     {
         /// <summary>
         /// Gets the color manager.

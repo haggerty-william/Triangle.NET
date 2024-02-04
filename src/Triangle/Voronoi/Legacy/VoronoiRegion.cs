@@ -57,7 +57,9 @@ namespace TriangleNet.Voronoi.Legacy
             set { bounded = value; }
         }
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public VoronoiRegion(Vertex generator)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             this.id = generator.id;
             this.generator = generator;
@@ -67,12 +69,16 @@ namespace TriangleNet.Voronoi.Legacy
             this.neighbors = new Dictionary<int, VoronoiRegion>();
         }
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public void Add(Point point)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             this.vertices.Add(point);
         }
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public void Add(List<Point> points)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             this.vertices.AddRange(points);
         }
@@ -103,7 +109,9 @@ namespace TriangleNet.Voronoi.Legacy
             this.neighbors.Add(id, neighbor);
         }
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public override string ToString()
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             return String.Format("R-ID {0}", id);
         }

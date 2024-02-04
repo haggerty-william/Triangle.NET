@@ -101,6 +101,10 @@ namespace TriangleNet.Geometry
         /// </summary>
         public VertexType Type => type;
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+        public float Elevation { get; set; }
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
+
         /// <summary>
         /// Gets the specified coordinate of the vertex.
         /// </summary>
