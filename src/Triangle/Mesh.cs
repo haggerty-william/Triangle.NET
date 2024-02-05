@@ -160,8 +160,10 @@ namespace TriangleNet
 
         private void Initialize()
         {
-            dummysub = new SubSegment();
-            dummysub.hash = DUMMY;
+            dummysub = new SubSegment
+            {
+                hash = DUMMY
+            };
 
             // Initialize the two adjoining subsegments to be the omnipresent
             // subsegment. These will eventually be changed by various bonding
@@ -476,9 +478,10 @@ namespace TriangleNet
         /// <param name="newsubseg">Reference to the new subseg.</param>
         internal void MakeSegment(ref Osub newsubseg)
         {
-            var seg = new SubSegment();
-
-            seg.hash = hash_seg++;
+            var seg = new SubSegment
+            {
+                hash = hash_seg++
+            };
 
             seg.subsegs[0].seg = dummysub;
             seg.subsegs[1].seg = dummysub;
@@ -636,10 +639,12 @@ namespace TriangleNet
                             if (enq)
                             {
                                 // Add the subsegment to the list of encroached subsegments.
-                                encroached = new BadSubseg();
-                                encroached.subseg = brokensubseg;
-                                encroached.org = brokensubseg.Org();
-                                encroached.dest = brokensubseg.Dest();
+                                encroached = new BadSubseg
+                                {
+                                    subseg = brokensubseg,
+                                    org = brokensubseg.Org(),
+                                    dest = brokensubseg.Dest()
+                                };
 
                                 qualityMesher.AddBadSubseg(encroached);
                             }

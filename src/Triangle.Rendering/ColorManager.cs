@@ -58,14 +58,15 @@ namespace TriangleNet.Rendering
         /// </summary>
         public static ColorManager Default()
         {
-            var colors = new ColorManager();
-
-            colors.Background = Color.FromArgb(0, 0, 0);
-            colors.Point = Color.Green;
-            colors.SteinerPoint = Color.Peru;
-            colors.Line = Color.FromArgb(30, 30, 30);
-            colors.Segment = Color.DarkBlue;
-            colors.VoronoiLine = Color.FromArgb(40, 50, 60);
+            var colors = new ColorManager
+            {
+                Background = Color.FromArgb(0, 0, 0),
+                Point = Color.Green,
+                SteinerPoint = Color.Peru,
+                Line = Color.FromArgb(30, 30, 30),
+                Segment = Color.DarkBlue,
+                VoronoiLine = Color.FromArgb(40, 50, 60)
+            };
 
             return colors;
         }

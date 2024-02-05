@@ -37,8 +37,10 @@ namespace TriangleNet.Rendering.Text
         public EpsDocument(Stream stream, PageSize pageSize)
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
-            _w = new FormattingStreamWriter(stream);
-            _w.NewLine = "\n";
+            _w = new FormattingStreamWriter(stream)
+            {
+                NewLine = "\n"
+            };
 
             _size = pageSize;
 
