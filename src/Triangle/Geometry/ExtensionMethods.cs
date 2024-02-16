@@ -96,15 +96,15 @@ namespace TriangleNet.Geometry
             var t2 = triangle.GetVertex(2);
 
             // TODO: no need to create new Point instances here
-            Point d0 = new Point(t1.X - t0.X, t1.Y - t0.Y);
-            Point d1 = new Point(t2.X - t0.X, t2.Y - t0.Y);
-            Point d2 = new Point(x - t0.X, y - t0.Y);
+            Point d0 = new(t1.X - t0.X, t1.Y - t0.Y);
+            Point d1 = new(t2.X - t0.X, t2.Y - t0.Y);
+            Point d2 = new(x - t0.X, y - t0.Y);
 
             // crossproduct of (0, 0, 1) and d0
-            Point c0 = new Point(-d0.Y, d0.X);
+            Point c0 = new(-d0.Y, d0.X);
 
             // crossproduct of (0, 0, 1) and d1
-            Point c1 = new Point(-d1.Y, d1.X);
+            Point c1 = new(-d1.Y, d1.X);
 
             // Linear combination d2 = s * d0 + v * d1.
             //

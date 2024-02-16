@@ -745,7 +745,7 @@ namespace TriangleNet
                 }// end of relocation
             }// end of almostGood
 
-            Point circumcenter = new Point();
+            Point circumcenter = new();
 
             if (relocated <= 0)
             {
@@ -1935,7 +1935,7 @@ namespace TriangleNet
                 }// end of relocation
             }// end of almostGood
 
-            Point circumcenter = new Point();
+            Point circumcenter = new();
 
             if (relocated <= 0)
             {
@@ -4028,7 +4028,7 @@ namespace TriangleNet
             double d1, d2, d3, ahead;
             //triangle ptr;                         // Temporary variable used by sym().
 
-            Point newvertex = new Point(newlocX, newlocY);
+            Point newvertex = new(newlocX, newlocY);
 
             // 	printf("newvertex %f,%f\n", newvertex[0], newvertex[1]);
             // Find the location of the vertex to be inserted.  Check if a good

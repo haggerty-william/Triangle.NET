@@ -758,7 +758,7 @@ namespace TriangleNet.Meshing
                 {
                     // The new vertex must be in the interior, and therefore is a
                     // free vertex with a marker of zero.
-                    Vertex newvertex = new Vertex(newloc.x, newloc.y, 0
+                    Vertex newvertex = new(newloc.x, newloc.y, 0
 #if USE_ATTRIBS
                         , mesh.nextras
 #endif

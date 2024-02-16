@@ -85,15 +85,15 @@ namespace TriangleNet.Tools
         internal static bool IsPointInTriangle(Point p, Point t0, Point t1, Point t2)
         {
             // TODO: no need to create new Point instances here
-            Point d0 = new Point(t1.x - t0.x, t1.y - t0.y);
-            Point d1 = new Point(t2.x - t0.x, t2.y - t0.y);
-            Point d2 = new Point(p.x - t0.x, p.y - t0.y);
+            Point d0 = new(t1.x - t0.x, t1.y - t0.y);
+            Point d1 = new(t2.x - t0.x, t2.y - t0.y);
+            Point d2 = new(p.x - t0.x, p.y - t0.y);
 
             // crossproduct of (0, 0, 1) and d0
-            Point c0 = new Point(-d0.y, d0.x);
+            Point c0 = new(-d0.y, d0.x);
 
             // crossproduct of (0, 0, 1) and d1
-            Point c1 = new Point(-d1.y, d1.x);
+            Point c1 = new(-d1.y, d1.x);
 
             // Linear combination d2 = s * d0 + v * d1.
             //

@@ -22,7 +22,7 @@ namespace TriangleNet.Meshing
     /// </summary>
     public class Converter
     {
-        private static readonly Lazy<Converter> lazy = new Lazy<Converter>(() => new Converter());
+        private static readonly Lazy<Converter> lazy = new(() => new Converter());
 
         /// <summary>
         /// Gets the <see cref="Converter"/> instance.

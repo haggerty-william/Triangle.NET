@@ -607,7 +607,7 @@ namespace TriangleNet.Meshing.Algorithm
             double ccwabc;
             double xac, yac, xbc, ybc;
             double aclen2, bclen2;
-            Point searchpoint = new Point(); // TODO: mesh.nextras
+            Point searchpoint = new(); // TODO: mesh.nextras
             Otri dummytri = default(Otri);
 
             ccwabc = predicates.CounterClockwise(pa, pb, pc);

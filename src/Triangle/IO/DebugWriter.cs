@@ -48,7 +48,7 @@ namespace TriangleNet.IO
 
         #region Singleton pattern
 
-        private static readonly DebugWriter instance = new DebugWriter();
+        private static readonly DebugWriter instance = new();
 
         // Explicit static constructor to tell C# compiler
         // not to mark type as beforefieldinit

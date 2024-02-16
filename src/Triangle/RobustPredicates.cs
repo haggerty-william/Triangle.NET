@@ -28,7 +28,7 @@ namespace TriangleNet
     {
         #region Default predicates instance (Singleton)
 
-        private static readonly object creationLock = new object();
+        private static readonly object creationLock = new();
         private static RobustPredicates _default;
 
         /// <summary>

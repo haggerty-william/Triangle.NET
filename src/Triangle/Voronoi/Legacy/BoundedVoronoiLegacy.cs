@@ -272,7 +272,7 @@ namespace TriangleNet.Voronoi.Legacy
 
         private void ConstructCell(Vertex vertex)
         {
-            VoronoiRegion region = new VoronoiRegion(vertex);
+            VoronoiRegion region = new(vertex);
             regions.Add(region);
 
             Otri f = default(Otri);
@@ -384,7 +384,7 @@ namespace TriangleNet.Voronoi.Legacy
 
         private void ConstructBoundaryCell(Vertex vertex)
         {
-            VoronoiRegion region = new VoronoiRegion(vertex);
+            VoronoiRegion region = new(vertex);
             regions.Add(region);
 
             Otri f = default(Otri);
@@ -520,7 +520,7 @@ namespace TriangleNet.Voronoi.Legacy
                         // have to add the intersection with the segment.
 
                         // Center of f edge dest->apex
-                        Point bisec = new Point((tdest.x + tapex.x) / 2, (tdest.y + tapex.y) / 2);
+                        Point bisec = new((tdest.x + tapex.x) / 2, (tdest.y + tapex.y) / 2);
 
                         // Find intersection of seg with line through f's bisector and circumcenter
                         if (SegmentsIntersect(sorg, sdest, bisec, cc_f, out p, false))
@@ -567,7 +567,7 @@ namespace TriangleNet.Voronoi.Legacy
                             // have to add the intersection with the segment.
 
                             // Center of f_next edge org->dest
-                            Point bisec = new Point((torg.x + tdest.x) / 2, (torg.y + tdest.y) / 2);
+                            Point bisec = new((torg.x + tdest.x) / 2, (torg.y + tdest.y) / 2);
 
                             // Find intersection of seg with line through f_next's bisector and circumcenter
                             if (SegmentsIntersect(sorg, sdest, bisec, cc_f_next, out p, false))
