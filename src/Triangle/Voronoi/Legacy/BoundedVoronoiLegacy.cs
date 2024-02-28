@@ -155,7 +155,7 @@ namespace TriangleNet.Voronoi.Legacy
             int blinded = 0;
 
             Stack<Triangle> triangles;
-            subsegMap = new Dictionary<int, SubSegment>();
+            subsegMap = [];
 
             Otri f = default(Otri);
             Otri f0 = default(Otri);
@@ -286,7 +286,7 @@ namespace TriangleNet.Voronoi.Legacy
             int n = mesh.triangles.Count;
 
             // Call P the polygon (cell) in construction
-            List<Point> vpoints = new List<Point>();
+            List<Point> vpoints = [];
 
             // Call f_init a triangle incident to x
             vertex.tri.Copy(ref f_init);
@@ -400,7 +400,7 @@ namespace TriangleNet.Voronoi.Legacy
             int n = mesh.triangles.Count;
 
             // Call P the polygon (cell) in construction
-            List<Point> vpoints = new List<Point>();
+            List<Point> vpoints = [];
 
             // Call f_init a triangle incident to x
             vertex.tri.Copy(ref f_init);

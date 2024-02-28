@@ -27,7 +27,7 @@ namespace TriangleNet.Meshing.Iterators
         /// </summary>
         public RegionIterator()
         {
-            region = new List<Triangle>();
+            region = [];
         }
 
         /// <summary>

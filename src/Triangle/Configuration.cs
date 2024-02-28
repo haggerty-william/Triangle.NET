@@ -17,7 +17,7 @@ namespace TriangleNet
         /// Initializes a new instance of the <see cref="Configuration" /> class.
         /// </summary>
         public Configuration()
-            : this(() => RobustPredicates.Default, () => new TrianglePool())
+            : this(() => RobustPredicates.Default, () => [])
         {
         }
 
@@ -26,7 +26,7 @@ namespace TriangleNet
         /// </summary>
         /// <param name="predicates">Factory method for <see cref="IPredicates" />.</param>
         public Configuration(Func<IPredicates> predicates)
-            : this(predicates, () => new TrianglePool())
+            : this(predicates, () => [])
         {
         }
 

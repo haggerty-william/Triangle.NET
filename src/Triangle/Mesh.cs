@@ -203,14 +203,14 @@ namespace TriangleNet
             behavior = new Behavior();
 
             vertices = new Dictionary<int, Vertex>(points.Count);
-            subsegs = new Dictionary<int, SubSegment>();
+            subsegs = [];
 
             triangles = config.TrianglePool();
 
             flipstack = new Stack<Otri>();
 
-            holes = new List<Point>();
-            regions = new List<RegionPointer>();
+            holes = [];
+            regions = [];
 
             steinerleft = -1;
 

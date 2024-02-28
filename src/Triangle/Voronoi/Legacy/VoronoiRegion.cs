@@ -63,10 +63,10 @@ namespace TriangleNet.Voronoi.Legacy
         {
             this.id = generator.id;
             this.generator = generator;
-            this.vertices = new List<Point>();
+            this.vertices = [];
             this.bounded = true;
 
-            this.neighbors = new Dictionary<int, VoronoiRegion>();
+            this.neighbors = [];
         }
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member

@@ -43,7 +43,7 @@ namespace TriangleNet.Smoothing
         public SimpleSmoother(IVoronoiFactory factory)
         {
             this.factory = factory;
-            pool = new TrianglePool();
+            pool = [];
 
             config = new Configuration(
                 () => RobustPredicates.Default,

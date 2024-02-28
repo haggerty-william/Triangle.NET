@@ -157,7 +157,7 @@ namespace TriangleNet.Tools
                 this.bitRegions = 0;
 
                 this.regions = new QuadNode[4];
-                this.triangles = new List<int>();
+                this.triangles = [];
 
                 if (init)
                 {

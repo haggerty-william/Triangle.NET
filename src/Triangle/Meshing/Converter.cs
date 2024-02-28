@@ -114,8 +114,10 @@ namespace TriangleNet.Meshing
             {
                 Otri tmp = default(Otri);
                 tmp.tri = mesh.dummytri;
-                vertexarray[i] = new List<Otri>(3);
-                vertexarray[i].Add(tmp);
+                vertexarray[i] = new List<Otri>(3)
+                {
+                    tmp
+                };
             }
 
             i = 0;

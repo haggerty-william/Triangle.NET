@@ -67,7 +67,7 @@ namespace TriangleNet.Meshing.Algorithm
             int heapsize;
             bool check4events, farrightflag = false;
 
-            splaynodes = new List<SplayNode>();
+            splaynodes = [];
             splayroot = null;
 
             heapsize = points.Count;

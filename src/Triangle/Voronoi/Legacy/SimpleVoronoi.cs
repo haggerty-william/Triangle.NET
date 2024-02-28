@@ -89,7 +89,7 @@ namespace TriangleNet.Voronoi.Legacy
             this.points = new Point[mesh.triangles.Count + mesh.hullsize];
             this.regions = new Dictionary<int, VoronoiRegion>(mesh.vertices.Count);
 
-            rayPoints = new Dictionary<int, Point>();
+            rayPoints = [];
             rayIndex = 0;
 
             bounds = new Rectangle();

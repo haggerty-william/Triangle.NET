@@ -46,8 +46,8 @@ namespace TriangleNet.Voronoi
             this.factory = factory ?? new DefaultVoronoiFactory();
             this.predicates = predicates;
 
-            edges = new List<HalfEdge>();
-            rays = new List<HalfEdge>();
+            edges = [];
+            rays = [];
 
             if (generate)
             {
@@ -133,7 +133,7 @@ namespace TriangleNet.Voronoi
                 vertex.label = t.label;
 
                 vertices[id] = vertex;
-                map[id] = new List<HalfEdge>();
+                map[id] = [];
             }
 
             return map;

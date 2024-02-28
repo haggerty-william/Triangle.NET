@@ -33,7 +33,7 @@ namespace TriangleNet.Meshing
             this.behavior = mesh.behavior;
             this.locator = mesh.locator;
 
-            this.viri = new List<Triangle>();
+            this.viri = [];
         }
 
 

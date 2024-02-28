@@ -181,10 +181,10 @@ namespace TriangleNet.Tools
             _eta = new MeasureEta();
             _q = new MeasureQ();
 
-            measures = new List<Measure>()
-            {
+            measures =
+            [
                 _area, _alpha, _eta, _q
-            };
+            ];
         }
 
         /// <summary>

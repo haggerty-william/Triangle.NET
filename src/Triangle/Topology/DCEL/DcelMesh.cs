@@ -39,9 +39,9 @@ namespace TriangleNet.Topology.DCEL
         {
             if (initialize)
             {
-                vertices = new List<Vertex>();
-                edges = new List<HalfEdge>();
-                faces = new List<Face>();
+                vertices = [];
+                edges = [];
+                faces = [];
             }
         }
 

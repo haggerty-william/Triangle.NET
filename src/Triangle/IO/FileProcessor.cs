@@ -20,10 +20,10 @@ namespace TriangleNet.IO
         static FileProcessor()
         {
             // Add Triangle file format as default.
-            formats = new List<IFileFormat>
-            {
+            formats =
+            [
                 new TriangleFormat()
-            };
+            ];
         }
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member

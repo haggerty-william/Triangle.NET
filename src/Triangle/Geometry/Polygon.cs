@@ -67,10 +67,10 @@ namespace TriangleNet.Geometry
         public Polygon(int capacity, bool markers)
         {
             points = new List<Vertex>(capacity);
-            holes = new List<Point>();
-            regions = new List<RegionPointer>();
+            holes = [];
+            regions = [];
 
-            segments = new List<ISegment>();
+            segments = [];
 
             HasPointMarkers = markers;
             HasSegmentMarkers = markers;

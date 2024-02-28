@@ -15,7 +15,7 @@ namespace TriangleNet.Meshing.Iterators
     /// </summary>
     public class VertexCirculator
     {
-        List<Otri> cache = new List<Otri>();
+        List<Otri> cache = [];
 
         /// <summary>
         /// Initializes a new instance of the <see cref="VertexCirculator" /> class.
